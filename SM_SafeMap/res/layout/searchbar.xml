@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/searchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/search" />
+
+    <EditText
+        android:id="@+id/searchEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/searchBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/searchBtn"
+        android:ems="10"
+        android:singleLine="true" 
+        android:textColor="@android:color/white">
+
+        <!--  android:background="@drawable/searchbar"-->
+
+        <requestFocus />
+    </EditText>
+
+</RelativeLayout>

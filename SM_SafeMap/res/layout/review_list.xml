@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_launcher" 
+        android:layout_margin="5dp"
+        android:paddingBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nickname"
+        android:layout_below="@+id/nickname"
+        android:text="위치"
+        android:textSize="13sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/comment"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/location"
+        android:layout_below="@+id/location"
+        android:layout_toLeftOf="@+id/reviewbutton"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="3"
+        android:paddingRight="7dp"
+        android:singleLine="true"
+        android:text="코멘트"
+        android:textSize="15sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/icon"
+        android:text="별명"
+        android:textStyle="bold" 
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/nickname"
+        android:layout_alignBottom="@+id/nickname"
+        android:layout_alignParentRight="true"
+        android:text="날짜"
+        android:textSize="14sp"
+        android:textStyle="italic" 
+        android:paddingRight="7dp"/>
+
+    <Button
+        android:id="@+id/reviewbutton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/comment"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/date"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/view"/>
+
+</RelativeLayout>

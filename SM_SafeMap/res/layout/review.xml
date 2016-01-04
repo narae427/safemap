@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/newreviewLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="420dp"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" >
+
+        <ImageView
+            android:id="@+id/rvvicon"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="210dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="15dp"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="50dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="13dp"
+            android:text="별명"
+            android:textColor="#000000"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/rvvname"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/editboxstyle"
+            android:editable="false"
+            android:ems="10"
+            android:focusable="false"
+            android:maxLength="8"
+            android:singleLine="true"
+            android:textSize="14dp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/second"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/third"
+        android:layout_alignRight="@+id/third"
+        android:layout_below="@+id/first"
+        android:layout_marginTop="30dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="15dp"
+            android:text="위치"
+            android:textColor="#000000"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/rvvlocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/editboxstyle"
+            android:editable="false"
+            android:ems="10"
+            android:singleLine="true"
+            android:focusable="false"         
+            android:textSize="14dp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/third"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/deletebtn"
+        android:layout_below="@+id/second"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingRight="15dp"
+            android:text="내용"
+            android:textColor="#000000"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/rvvcomment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/editboxstyle"
+            android:editable="false"
+            android:ems="10"
+            android:focusable="false"
+            android:gravity="top"
+            android:textSize="14dp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/closebtn"
+        android:layout_width="33dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/closebtn" />
+
+    <Button
+        android:id="@+id/deletebtn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/third"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/delete" />
+
+</RelativeLayout>

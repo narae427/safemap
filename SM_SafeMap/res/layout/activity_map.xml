@@ -1,0 +1,161 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/FrameLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" />
+
+        <SlidingDrawer
+            android:id="@+id/slidingDrawer1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:bottomOffset="-68dp"
+            android:content="@+id/content"
+            android:handle="@+id/handle"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/handle"
+                android:layout_width="wrap_content"
+                android:layout_height="13dp"
+                android:background="@drawable/handle" />
+
+            <LinearLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffffff" >
+
+                <ListView
+                    android:id="@+id/mapListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="#ffff00"
+                    android:dividerHeight="1dp">
+                </ListView>
+            </LinearLayout>
+        </SlidingDrawer>
+
+        <RelativeLayout
+            android:id="@+id/selectedReview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignTop="@+id/mapProgressbar" >
+            
+             <ImageView
+        android:id="@+id/sicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_launcher" 
+        android:layout_margin="5dp"/>
+
+    <TextView
+        android:id="@+id/slocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/snickname"
+        android:layout_below="@+id/snickname"
+        android:text="위치"
+        android:textSize="13sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/scomment"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/slocation"
+        android:layout_below="@+id/slocation"
+        android:layout_toLeftOf="@+id/sreviewbutton"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="3"
+        android:paddingRight="7dp"
+        android:singleLine="true"
+        android:text="코멘트"
+        android:textSize="15sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/snickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/sicon"
+        android:text="별명"
+        android:textStyle="bold" 
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/sdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/snickname"
+        android:layout_alignBottom="@+id/snickname"
+        android:layout_alignParentRight="true"
+        android:text="날짜"
+        android:textSize="14sp"
+        android:textStyle="italic" 
+        android:paddingRight="7dp"/>
+
+    <Button
+        android:id="@+id/sreviewbutton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/scomment"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/sdate"
+        android:layout_marginRight="5dp"
+        android:text="보기" />
+    
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/reviewTVRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#ffffff"
+            android:layout_alignTop="@+id/mapProgressbar" >
+
+            <TextView
+                android:id="@+id/reviewTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="SafeMap Review" 
+                android:textSize="20dp"
+                android:textColor="#006400"/>
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/mapProgressbar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/map"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+
+    </RelativeLayout>
+
+</FrameLayout>

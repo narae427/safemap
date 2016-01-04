@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dip"
+    android:layout_height="200dip"
+    android:layout_centerInParent="true"
+    android:background="@drawable/dialogbgyellow" >
+
+    <Button
+        android:id="@+id/joinBtn"
+        android:background="@drawable/join"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="15dp"/>
+
+    <TextView
+        android:id="@+id/popupText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text=" SafeMap 회원가입"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/popupText1"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp" >
+
+        <EditText
+            android:id="@+id/joineditText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/emailText"
+            android:background="@drawable/editboxstyle"
+            android:ems="10"
+            android:hint="safemap@example.com"
+            android:singleLine="true" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/emailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/joineditText1"
+            android:layout_alignBottom="@+id/joineditText1"
+            android:layout_alignParentLeft="true"
+            android:text="E-mail"
+            android:textColor="@android:color/black"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/joineditText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/joineditText1"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/joineditText1"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/editboxstyle"
+            android:ems="10"
+            android:hint="최대 8글자"
+            android:maxLength="8"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/nicknameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/joineditText2"
+            android:layout_alignBottom="@+id/joineditText2"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:text="별명"
+            android:textColor="@android:color/black"
+            android:textSize="15dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

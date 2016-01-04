@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="280dip"
+    android:layout_height="185dip"
+    android:layout_centerInParent="true"
+    android:background="@drawable/dialogbg" >
+
+    <Button
+        android:id="@+id/yes"
+        android:layout_width="120dp"
+        android:background="@drawable/yes"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" 
+        android:layout_margin="15dp"
+        android:layout_marginBottom="31dp"/>
+
+    <Button
+        android:id="@+id/no"
+        android:layout_width="120dp"
+        android:background="@drawable/no"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="15dp" />
+
+    <TextView
+        android:id="@+id/askdelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView1"
+        android:layout_marginLeft="17dp"
+        android:layout_toRightOf="@+id/imageView1"
+        android:layout_marginTop="12dp"
+        android:text="삭제하시겠습니까?"
+        android:textColor="@android:color/black"
+        android:textSize="17dp" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/yes"
+        android:layout_alignLeft="@+id/yes"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="18dp"
+        android:src="@drawable/www" />
+
+</RelativeLayout>

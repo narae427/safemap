@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SafeMap</string>
+    <string name="action_settings">Settings</string>
+    <string name="sos_tab1">S.O.S 서비스</string>
+    <string name="sos_tab2">긴급문자</string>
+    <string name="review_tab1">새 리뷰</string>
+    <string name="review_tab2">내가 쓴 리뷰</string>
+    
+    <string-array name="warning_array2">
+        <item>양호</item>
+        <item>위험</item>
+        <item>사망</item>
+    </string-array>
+    
+
+</resources>
